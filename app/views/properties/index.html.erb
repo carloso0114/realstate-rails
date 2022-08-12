@@ -8,19 +8,17 @@
   <tr>
     <th>Public ID</th>
     <th>Title</th>
-    <th>Description</th>
     <th>Images</th>
     <th>Type</th>
     <th>Location</th>
-    <th>Contact Form</th>
+    <th>More info</th>
   </tr>
   <% @propertiesArray.each do |element| %>
    <tr>
      <td><%= element.public_id %></td>
      <td><%= element.title %></td>
-     <td><%= element.description %></td>
      <td><img src="<%= element.title_image_thumb %>" alt="preview property"</img></td>
-     <td><%= element.type %></td>
+     <td><%= element.property_type %></td>
      <td><%= element.location %></td>
      <td><%= link_to "Show", "/property/"+element.public_id %></td>
    </tr>
