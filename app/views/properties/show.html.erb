@@ -1,23 +1,19 @@
-<%= link_to "Back", :back %>
-<table>
-  <tr>
-    <th>Public ID</th>
-    <th>Title</th>
-    <th>Images</th>
-    <th>Type</th>
-    <th>Location</th>
-  </tr>
-
-   <tr>
-     <td><%= @property.public_id %></td>
-     <td><%= @property.title %></td>
-     <% @property.property_images.each do |element| %>
-      <tr>
-        <td><img src="<%= element.url %>" alt="preview property"</img></td>
-      </tr>
-      <% end %>
-     <td><img src="<%= @property.title_image_thumb %>" alt="preview property"</img></td>
-     <td><%= @property.property_type %></td>
-     <td><%= @property.location.name %></td>
-   </tr>
-</table>
+<div>
+  <p><%= link_to "Back", :back %></p>
+</div>
+<div>
+  <p class="titulo">Public id</p>
+  <p class="dato"><%= @property.public_id %></p>
+  <p class="titulo">Title</p>
+  <p class="dato"><%= @property.title %></p>
+  <p class="titulo">Name</p>
+  <p class="dato"><%= @property.property_type %></p>
+  <p class="titulo">Location</p>
+  <p class="dato"><%= @property.location.name %></p>
+  <p class="titulo">Photo</p>
+  <% if defined?(@property.property_images[0].url) %>
+  <img src="<%= @property.property_images[0].url %>" alt="property pics"/>
+  <% else %>
+  <p>No photo available</p>
+  <% end %>
+</div>

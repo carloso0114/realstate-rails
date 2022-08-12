@@ -1,8 +1,10 @@
+<div>
 <p>Page <%= @id %>
 <% if !(@id.to_i === 1) %>
 <%= link_to "Previous Page", "/properties/"+((@id.to_i)-1).to_s %>
 <% end %>
 <%= link_to "Next Page", "/properties/"+((@id.to_i)+1).to_s %>
+</div>
 <br>
 <table>
   <tr>
@@ -15,12 +17,12 @@
   </tr>
   <% @propertiesArray.each do |element| %>
    <tr>
-     <td><%= element.public_id %></td>
-     <td><%= element.title %></td>
-     <td><img src="<%= element.title_image_thumb %>" alt="preview property"</img></td>
-     <td><%= element.property_type %></td>
-     <td><%= element.location %></td>
-     <td><%= link_to "Show", "/property/"+element.public_id %></td>
+     <td class="text-center"><%= element.public_id %></td>
+     <td class="text-left p-5"><%= element.title %></td>
+     <td class="flex justify-center"><img class="thumbnail" src="<%= element.title_image_thumb %>" alt="preview property"/></td>
+     <td class="text-center"><%= element.property_type %></td>
+     <td class="text-center"><%= element.location %></td>
+     <td class="text-center"><%= link_to "Show", "/property/"+element.public_id %></td>
    </tr>
    <% end %>
 </table>

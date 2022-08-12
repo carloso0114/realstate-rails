@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
+body {
+  @apply bg-black text-white p-2;
 }
 
-*/
+.titulo {
+  @apply text-red-500 text-lg;
+}
+
+.dato {
+  @apply text-indigo-500 text-sm;
+}
+
+a {
+  @apply bg-blue-600 rounded p-1 hover:bg-blue-800;
+}
+
+table {
+  @apply border-2 border-solid border-white w-full;
+}
+
+th {
+  @apply text-center border-solid border-white border-2;
+}
+
+td {
+  @apply border-solid border-white border-2;
+}
+
+.thumbnail {
+  @apply w-full h-28;
+}
