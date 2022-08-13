@@ -33,3 +33,11 @@ td {
 .thumbnail {
   @apply w-full h-28;
 }
+
+input[type="text"] {
+  @apply text-black;
+}
+
+input[type="submit"] {
+  @apply bg-blue-600 rounded p-1 hover:bg-blue-800 my-2;
+}

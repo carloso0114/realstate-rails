@@ -1,5 +1,5 @@
 <div>
-  <p><%= link_to "Back", :back %></p>
+  <p><%= link_to "Back", root_path %></p>
 </div>
 <div>
   <p class="titulo">Public id</p>
@@ -17,3 +17,26 @@
   <p>No photo available</p>
   <% end %>
 </div>
+  <%= form_with url: 'contact_request' do |form| %>
+  <%= form.hidden_field :property_id, value: @property.public_id %>
+  <%= form.hidden_field :source, value: 'carloso0114@mywebsite.com' %>
+  <div class="flex flex-col">
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name %>  
+  </div>
+  <div class="flex flex-col">
+  <%= form.label :phone, "Phone:" %>
+  <%= form.text_field :phone %>  
+  </div>
+  <div class="flex flex-col">
+  <%= form.label :email, "Email:" %>
+  <%= form.text_field :email %>  
+  </div>
+  <div class="flex flex-col">
+  <%= form.label :message, "Message:" %>
+  <%= form.text_field :message %>  
+  </div>
+  <% form.text_field :property_id %> 
+  <%= form.submit "Create" %>  
+  <% end %>  
+
