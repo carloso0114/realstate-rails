@@ -12,6 +12,10 @@
 - Open any browser and navigate to the url http://127.0.0.1:3000
 - Enjoy
 
+**Screeenshots**
+![Screenshot](/lib/assets/1.jpg)
+![Screenshot](/lib/assets/2.jpg)
+![Screenshot](/lib/assets/3.jpg)
 *Ruby version*
 3.1.2
 *Rails version*
