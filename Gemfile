@@ -74,6 +74,15 @@ group :test do
   gem "webdrivers"
 end
 
+# Tailwind css framework gem
 gem "tailwindcss-rails", "~> 2.0"
 
+# create http requests easily with httparty gem
 gem "httparty"
+
+# Rspec
+gem 'rspec', '~> 3.11'
+
+# Use to test api without calling api severaltimes
+gem 'webmock'
+gem 'vcr'
